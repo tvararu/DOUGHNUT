@@ -8,6 +8,7 @@ group :development, :test do
 end
 
 group :assets do
+  gem 'sass' # haml politely asked me to add this
   gem 'haml-rails'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
