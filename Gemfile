@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 gem 'bcrypt-ruby'
+gem 'haml-rails'
+gem 'sass' # haml politely asked me to add this
 
 group :development, :test do
   gem 'sqlite3'
@@ -14,8 +16,6 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'bootstrap-sass'
-  gem 'haml-rails'
-  gem 'sass' # haml politely asked me to add this
   
   gem 'jquery-rails'
   gem 'coffee-rails', '~> 3.2.1'
