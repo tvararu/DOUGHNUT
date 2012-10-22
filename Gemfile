@@ -4,6 +4,9 @@ gem 'rails', '3.2.8'
 gem 'bcrypt-ruby'
 gem 'haml-rails'
 gem 'sass' # haml politely asked me to add this
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :development, :test do
   gem 'sqlite3'
