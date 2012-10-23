@@ -4,10 +4,23 @@ describe "AuthenticationPages" do
   subject { page }
   
   describe "signin page" do
-    before { visit signin_path }
+    describe "as a signed out user" do
+      before { visit signin_path }
     
-    it { should have_selector('h1', text: 'Sign in') }
-    it { should have_selector('title', text: 'Sign in') }
+      it { should have_selector('h1', text: 'Sign in') }
+      it { should have_selector('title', text: 'Sign in') }
+    end
+    
+    describe "as a signin out user" do
+      let(:user) { FactoryGirl.create(:user) }
+      
+      before do
+        sign_in user
+        visit signin_path
+      end
+      
+      it { should_not have_selector('h1', text: 'Sign in') }
+    end
   end
   
   describe "signin" do
