@@ -48,25 +48,10 @@ describe "UserPages" do
   end
   
   describe "signup page" do
-    describe "as a signed out user" do
-      before { visit signup_path }
-    
-      it { should have_selector('h1', text: 'Sign up') }
-      it { should have_selector('title', text: full_title('Sign up')) }
-    end
-    
-    describe "as a signed in user" do
-      let(:user) { FactoryGirl.create(:user) }
-      
-      before do
-        sign_in user
-        visit signup_path
-      end
-      
-      describe "should redirect" do
-        it { should_not have_selector('h1', text: 'Sign up') }
-      end
-    end
+    before { visit signup_path }
+  
+    it { should have_selector('h1', text: 'Sign up') }
+    it { should have_selector('title', text: full_title('Sign up')) }
   end
 
   describe "profile page" do
