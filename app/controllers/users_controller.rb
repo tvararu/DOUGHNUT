@@ -4,11 +4,11 @@ class UsersController < ApplicationController
   before_filter :admin_user,     only: [:destroy]
   
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.paginate(page: params[:page]) unless !current_user.admin?
   end
   
   def show
-    @user = User.find(params[:id])
+    @user = User.find(params[:id]) unless correct_user
   end
   
   def new
