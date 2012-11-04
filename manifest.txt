@@ -1,0 +1,11 @@
+
+DOUGHNUT - expenditure tracking that doesn't hurt ((need to work on this description))
+ - ruby on rails
+ - bootstrap for the interface, CLEAN and LEAN
+ - openauth, or simple sign up with just email and password; no need to wait for confirmation
+ - free forever
+ - no advertising
+ - KEYBINDINGS and huge UX emphasis on rapid data entry; get on, add your shit, get off and go do something else, very few menus and configuration
+ - convincing landing page
+ - extensible with OPTIONAL feature packs for more advanced personal accounting needs; possible monetization opportunity?
+ - Finanshell - possible paid extension application?
