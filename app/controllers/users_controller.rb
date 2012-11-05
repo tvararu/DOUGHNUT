@@ -4,7 +4,11 @@ class UsersController < ApplicationController
   before_filter :admin_user,     only: [:destroy]
   
   def index
-    @users = User.paginate(page: params[:page]) unless !current_user.admin?
+    if (current_user.admin?)
+      @users = User.paginate(page: params[:page])
+    else
+      redirect_to root_url
+    end
   end
   
   def show
