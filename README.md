@@ -1,3 +1,3 @@
 # DOUGHNUT
 
-DOUGHNUT is the simplest expenditure tracker.
+DOUGHNUT - online expense tracking that doesn't hurt.
