@@ -17,6 +17,7 @@ describe User do
     it { should respond_to(:remember_token) }
     it { should respond_to(:admin) }
     it { should respond_to(:authenticate) }
+    it { should respond_to(:transactions) }
 
     it { should be_valid }
     it { should_not be_admin }
@@ -140,5 +141,21 @@ describe User do
   describe "remember token" do
     before { @user.save }
     its(:remember_token) { should_not be_blank }
+  end
+  
+  describe "transactions" do
+    before { @user.save }
+    let!(:transaction) do
+      FactoryGirl.create(:transaction, user: @user)
+    end
+    
+    it "should be destroyed along with user" do
+      transactions = @user.transactions.dup
+      @user.destroy
+      transactions.should_not be_empty
+      transactions.each do |transaction|
+        Transaction.find_by_id(transaction.id).should be_nil
+      end
+    end
   end
 end

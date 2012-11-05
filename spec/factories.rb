@@ -9,4 +9,11 @@ FactoryGirl.define do
       admin true
     end
   end
+  
+  factory :transaction do
+    sequence(:value) { |n| "#{n}" }
+    sequence(:description) { |n| "Description #{n}" }
+    date "05 Nov 2012"
+    user
+  end
 end

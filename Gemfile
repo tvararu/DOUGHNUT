@@ -9,6 +9,9 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'high_voltage'
 
+gem 'money-rails'
+gem 'google_currency'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
