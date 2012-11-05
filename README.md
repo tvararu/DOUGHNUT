@@ -1,3 +1,3 @@
 # DOUGHNUT
 
-DOUGHNUT - online expense tracking that doesn't hurt.
+Online expense tracking that doesn't hurt.
