@@ -7,6 +7,7 @@ gem 'sass' # haml politely asked me to add this
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'high_voltage'
 
 group :development, :test do
   gem 'sqlite3'

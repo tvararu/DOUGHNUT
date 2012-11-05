@@ -1,15 +1,19 @@
 Doughnut::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  
+  if HighVoltage.routes
+    get HighVoltage.route_drawer.match_attributes
+  end
 
-  root to: 'static_pages#home'
+  root to: 'high_voltage/pages#show', id: 'home'
+  
+  match '/help',    to: 'high_voltage/pages#show', id: 'help'
+  match '/about',   to: 'high_voltage/pages#show', id: 'about'
   
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
-  
-  match '/help',    to: 'static_pages#help'
-  match '/about',   to: 'static_pages#about'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
