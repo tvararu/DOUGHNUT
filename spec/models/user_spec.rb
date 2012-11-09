@@ -2,14 +2,13 @@ require 'spec_helper'
 
 describe User do
   before do
-    @user = User.new(name: "Example User", email: "user@example.com", 
+    @user = User.new(email: "user@example.com", 
                             password: "foobar", password_confirmation: "foobar")
   end
   
   subject { @user }
   
   describe "attributes" do
-    it { should respond_to(:name) }
     it { should respond_to(:email) }
     it { should respond_to(:password_digest) }
     it { should respond_to(:password) }
@@ -37,18 +36,6 @@ describe User do
       end
 
       it { should be_admin }
-    end
-  end
-  
-  describe "name" do
-    describe "not present" do
-      before { @user.name = " " }
-      it { should_not be_valid }
-    end
-    
-    describe "too long" do
-      before { @user.name = "a" * 51 }
-      it { should_not be_valid }
     end
   end
   
