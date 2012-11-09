@@ -1,5 +1,5 @@
 
-DOUGHNUT - expenditure tracking that doesn't hurt ((need to work on this description))
+DOUGHNUT - expense tracking that doesn't hurt
  - ruby on rails
  - bootstrap for the interface, CLEAN and LEAN
  - openauth, or simple sign up with just email and password; no need to wait for confirmation
@@ -9,3 +9,15 @@ DOUGHNUT - expenditure tracking that doesn't hurt ((need to work on this descrip
  - convincing landing page
  - extensible with OPTIONAL feature packs for more advanced personal accounting needs; possible monetization opportunity?
  - Finanshell - possible paid extension application?
+
+Landing page pitch:
+	Drop dead simple. 
+	DOUGHNUT is designed from the ground-up to do one thing and do it well((link to Wikipedia article on Unix philosophy)): keep track of your day-to-day expenses. Forget about endless by using hotkeys and a clean, lean user interface.
+	
+	Up and running in under a minute.
+	By using OpenAuth, you can sign in by using your existing Google, Facebook or Twitter account. If that's not your fancy, you can create a traditional user account by providing nothing more than a valid email and a password. It's fast, and it's ???
+	
+	Free forever, open-source. ((minigame with "shoot five banners to win a doughnut!"))
+	DOUGHNUT is completely free and always will be, doesn't annoy you with banners or popups((link to AdBlock)), and doesn't sell your information to people that want to track((Google)) and profile((Facebook)) you. Your transactions are kept in an encrypted database, and the entire application source code is publicly available on Github((link to repo)).
+	
+	
