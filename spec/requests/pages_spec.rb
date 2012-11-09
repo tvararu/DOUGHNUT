@@ -45,4 +45,18 @@ describe "Pages" do
     click_link "DOUGHNUT"
     page.should have_selector 'title', text: full_title('')
   end
+  
+  describe "layout links as admin:" do
+    let(:admin) { FactoryGirl.create(:admin) }
+    
+    before do
+      sign_in admin
+      visit root_path
+    end
+    
+    it "users link" do
+      click_link "Users"
+      page.should have_selector 'title', text: full_title('All users')
+    end
+  end
 end
