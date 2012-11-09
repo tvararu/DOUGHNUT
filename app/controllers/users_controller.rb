@@ -1,36 +1,29 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only: [:edit, :update, :destroy]
-  before_filter :correct_user,   only: [:edit, :update]
-  before_filter :admin_user,     only: [:index, :destroy]
+  before_filter :signed_out_user, only: [:new, :create]
+  before_filter :signed_in_user,  only: [:index, :show, :edit, :update, :destroy]
+  before_filter :correct_user,    only: [:show, :edit, :update]
+  before_filter :admin_user,      only: [:index, :destroy]
   
   def index
     @users = User.paginate(page: params[:page])
   end
   
   def show
-    @user = User.find(params[:id]) unless correct_user
+    @user = User.find(params[:id])
   end
   
   def new
-    if !signed_in?
-      @user = User.new
-    else
-      redirect_to root_url
-    end
+    @user = User.new
   end
   
   def create
-    if !signed_in?
-      @user = User.new(params[:user])
-      if @user.save
-        sign_in @user
-        flash[:success] = "Welcome to DOUGHNUT!"
-        redirect_to @user
-      else
-        render 'new'
-      end
+    @user = User.new(params[:user])
+    if @user.save
+      sign_in @user
+      flash[:success] = "Welcome to DOUGHNUT!"
+      redirect_to @user
     else
-      redirect_to root_url
+      render 'new'
     end
   end
   
@@ -60,21 +53,27 @@ class UsersController < ApplicationController
     end
   end
   
-  private
-    
-    def signed_in_user
-      unless signed_in?
-        store_location
-        redirect_to signin_url, notice: "Please sign in."
-      end
+private
+  def signed_out_user
+    if signed_in?
+      store_location
+      redirect_to root_url
     end
-    
-    def correct_user
-      @user = User.find(params[:id])
-      redirect_to(root_path) unless current_user?(@user)
+  end
+  
+  def signed_in_user
+    unless signed_in?
+      store_location
+      redirect_to signin_url, notice: "Please sign in."
     end
-    
-    def admin_user
-      redirect_to(root_path) unless signed_in? && current_user.admin?
-    end
+  end
+  
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(root_path) unless current_user?(@user)
+  end
+  
+  def admin_user
+    redirect_to(root_path) unless signed_in? && current_user.admin?
+  end
 end
