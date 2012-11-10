@@ -1,3 +1,6 @@
+!!!
+	- test responsive mobile views
+
 
 DOUGHNUT - expense tracking that doesn't hurt
  - ruby on rails

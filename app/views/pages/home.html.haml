@@ -3,8 +3,31 @@
 		.center.hero-unit
 			%h1
 				D
-				= image_tag("donut.svg")
+				= image_tag("doughnut.svg")
 				UGHNUT
-			%p Online expense tracking that doesn't hurt.
+			%p Expense tracking that doesn't hurt.
 			= link_to "Sign up now", signup_path, class: "btn btn-large btn-primary"
-			
+
+%hr
+.row
+	.span6
+		%h2 Drop dead simple.
+		%p 
+			DOUGHNUT is designed from the ground-up to 
+			%a{href: "http://en.wikipedia.org/wiki/Unix_philosophy", target: "_blank"}do one thing and do it well:
+			keep track of your day-to-day expenses. Forget about wizards and needlessly long forms, speed through your transactions by using in-browser hotkeys and a clean, lean user interface.
+	.span6
+		%img{src: "http://placehold.it/350x150"}
+
+%hr
+.row
+	.span6
+		%img{src: "http://placehold.it/350x150"}
+	.span6
+		%h2 Up and running in under a minute.
+		%p 
+			Start recording your transactions as early as
+			%b= 1.minute.from_now
+			by
+			= link_to "signing up", signup_path
+			with your existing Google, Facebook or Twitter account. If that's not your fancy, you can create a new user account by providing nothing more than a valid email and a password. 
