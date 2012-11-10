@@ -1,10 +1,17 @@
 %header.navbar.navbar-fixed-top
 	.navbar-inner
 		.container
-			= link_to "DOUGHNUT", root_path, id: "logo"
+			- if signed_in?
+				= link_to "DOUGHNUT", current_user, id: "logo"
+			- else
+				= link_to "DOUGHNUT", root_path, id: "logo"
 			%nav
 				%ul.nav.pull-right
-					%li= link_to "Home", root_path
+					%li
+						- if signed_in?
+							= link_to 'Home', current_user
+						- else
+							= link_to "Home", root_path
 					%li= link_to "Help", help_path
 					- if signed_in?
 						- if current_user && current_user.admin?
@@ -14,7 +21,6 @@
 								Account
 								%b.caret
 							%ul.dropdown-menu
-								%li= link_to "Profile", current_user
 								%li= link_to "Settings", edit_user_path(current_user)
 								%li.divider
 								%li= link_to "Sign out", signout_path, method: "delete"
