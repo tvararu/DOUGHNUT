@@ -57,7 +57,7 @@ private
   def signed_out_user
     if signed_in?
       store_location
-      redirect_to root_url
+      redirect_to current_user
     end
   end
   
