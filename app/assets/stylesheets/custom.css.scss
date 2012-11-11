@@ -3,6 +3,10 @@
 @import "font-awesome";
 
 $grayMediumLight: #eaeaea;
+$green: #5BB900;
+$greenDarker: #50A300;
+$grey: #999;
+$whitesmoke: #F2F2F2;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box; 
@@ -10,23 +14,64 @@ $grayMediumLight: #eaeaea;
   box-sizing: border-box;
 }
 
+@mixin anorexic_p {
+	font-size: 65px;
+	margin-bottom: 70px;
+	font-weight: 100;
+	letter-spacing: 3px;
+}
+
+#landing {
+	.row {
+		height: 500px;
+	}	
+	.marketing {
+		h1 {
+			margin-top: 90px;
+			text-align: left;
+		}
+		p {
+			font-size: 25px;
+		}
+	}
+	#logorow {
+		height: 200px;
+		p {
+			@include anorexic_p;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.btn-green {
+	color: white;
+	font-size: 24px;
+	padding: 12px 32px;
+	box-shadow: none;
+	background: $green;
+	border: 0;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	&:hover {
+		background: $greenDarker;
+		color: white;
+	}
+}
+
 .hero-unit {
+	background: none;
 	h1 {
-		font-size: 120px;
+		font-size: 198px;
 		font-weight: 100;
 		img {
-			height: 110px;
-			margin-left: -38px;
-			margin-right: -38px;
-			margin-top: -25px;
+			height: 183px;
+			margin-left: -65px;
+			margin-right: -65px;
+			margin-top: -38px;
 		}
 	}
 	p
 	{
-		font-size: 44px;
-		margin-left: -7px;
-		margin-bottom: 20px;
-		font-weight: 100;
+		@include anorexic_p;
 	}
 }
 
@@ -36,6 +81,7 @@ html {
 
 body {
   padding-top: 60px;
+	background: url('backnoise.jpg');
 }
 
 section {
@@ -81,24 +127,38 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
+  font-size: 22px;
+  color: $grey;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
-  font-weight: bold;
+  font-weight: 100;
   line-height: 1;
+	letter-spacing: 1px;
   &:hover {
-    color: white;
+    color: $grey;
     text-decoration: none;
   }
+	img {
+		height: 21px;
+		margin-top: -4px;
+		margin-left: -8px;
+		margin-right: -7px;
+	}
+}
+
+.navbar-inner {
+	background: $whitesmoke;
 }
 
 footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
+  color: $grey;
+	font-size: 15px;
+	font-weight: 200;
+	line-height: 25px;
   a {
     color: $gray;
     &:hover { 
@@ -107,6 +167,9 @@ footer {
   }  
   small { 
     float: left; 
+		img {
+			height: 25px;
+		}
   }
   ul {
     float: right;

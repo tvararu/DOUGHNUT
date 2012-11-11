@@ -1,6 +1,13 @@
 %footer.footer
 	%small
-		-# %a(href="http://www.tvararu.ro/")
+		Lovingly crafted by
+		%a(href="http://www.tvararu.ro/" target="_blank")
+			Theodor
+			= image_tag("tvararu.png")
+			Văraru.
+		&copy; 2012
+		- if (Time.now.year != 2012)
+			= " - #{Time.now.year}"
 	%nav
 		%ul
 			%li= link_to "About", about_path

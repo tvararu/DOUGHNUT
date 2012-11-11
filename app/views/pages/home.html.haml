@@ -1,33 +1,63 @@
-.row
-	.span12
-		.center.hero-unit
-			%h1
-				D
-				= image_tag("doughnut.svg")
-				UGHNUT
-			%p Expense tracking that doesn't hurt.
-			= link_to "Sign up now", signup_path, class: "btn btn-large btn-primary"
-
-%hr
-.row
-	.span6
-		%h2 Drop dead simple.
-		%p 
-			DOUGHNUT is designed from the ground-up to 
-			%a{href: "http://en.wikipedia.org/wiki/Unix_philosophy", target: "_blank"}do one thing and do it well:
-			keep track of your day-to-day expenses. Forget about wizards and needlessly long forms, speed through your transactions by using in-browser hotkeys and a clean, lean user interface.
-	.span6
-		%img{src: "http://placehold.it/350x150"}
-
-%hr
-.row
-	.span6
-		%img{src: "http://placehold.it/350x150"}
-	.span6
-		%h2 Up and running in under a minute.
-		%p 
-			Start recording your transactions as early as
-			%b= 1.minute.from_now
-			by
-			= link_to "signing up", signup_path
-			with your existing Google, Facebook or Twitter account. If that's not your fancy, you can create a new user account by providing nothing more than a valid email and a password. 
+#landing
+	.row#herow
+		.span12
+			.center.hero-unit
+				%h1
+					D
+					= image_tag("doughnut.svg")
+					UGHNUT
+				%p Expense tracking that doesn't hurt.
+				= link_to "Sign up now", signup_path, class: "btn btn-large btn-green"
+	
+	%hr
+	.row.marketing
+		.span6
+			%h1 Drop dead simple.
+			%p
+				DOUGHNUT is designed from the ground-up to 
+				%a{href: "http://en.wikipedia.org/wiki/Unix_philosophy", target: "_blank"} do one thing and do it well:
+				keep track of your day-to-day expenses. Forget about wizard assistants and needlessly long forms. Speed through your transactions by using in-browser hotkeys and a clean, lean user interface.
+		.span6
+			%img{src: "http://placehold.it/570x500"}
+	
+	%hr
+	.row.marketing
+		.span12		
+			%img{src: "http://placehold.it/1170x500"}
+			-# %h1 
+			-# 				Free as in free beer.
+			-# 				%br
+			-# 				Free as in free speech.
+			-# 				%br
+			-# 				And ad-free.
+			-# 			%p
+			-# 				DOUGHNUT doesn't annoy you with
+			-# 				%a{href: "http://www.google.com/#q=adblock", target: "_blank"} banners or popups.
+			-# 				It's completely free, always will be, and the entire application source code is 
+			-# 				%a{href: "https://github.com/tvararu/DOUGHNUT"} publicly available on Github.
+	
+	%hr
+	.row.marketing
+		.span6
+			%h1 Security and privacy.
+			%p Your transactions are kept in an encrypted database. We don't sell your information to advertisers. Lorem ipsum.
+		.span6
+			%img{src: "http://placehold.it/570x500"}
+	
+	%hr
+	.row.marketing
+		.span6
+			%img{src: "http://placehold.it/570x500"}
+		.span6
+			%h1 Up and running in under a minute.
+			%p
+				Built for speed, you can start using DOUGHNUT right now by
+				= link_to "signing up", signup_path
+				with your existing Google, Facebook or Twitter account. If that's not your fancy, creating a new account requires nothing more than a valid email and password.
+				
+	%hr
+	.row#logorow
+		.span12
+			.center
+				%p Lorem ipsum dolor sit atmet.
+				= link_to "Sign up for free", signup_path, class: "btn btn-large btn-green"

@@ -2,9 +2,15 @@
 	.navbar-inner
 		.container
 			- if signed_in?
-				= link_to "DOUGHNUT", current_user, id: "logo"
+				%a#logo{href: user_path(current_user)}
+					D
+					= image_tag("doughnut.svg")
+					UGHNUT
 			- else
-				= link_to "DOUGHNUT", root_path, id: "logo"
+				%a#logo{href: root_path}
+					D
+					= image_tag("doughnut.svg")
+					UGHNUT
 			%nav
 				%ul.nav.pull-right
 					%li

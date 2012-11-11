@@ -1,5 +1,6 @@
 !!!
 	- test responsive mobile views
+	- animation with "shoot five annoying banners to win a free DOUGHNUT 12-month subscription plan", onclick fade out and "silly rabbit, DOUGHNUT is free as in free beer"
 
 
 DOUGHNUT - expense tracking that doesn't hurt
@@ -20,6 +21,7 @@ Landing page pitch:
 	Up and running in under a minute.
 	By using OpenAuth, you can sign in by using your existing Google, Facebook or Twitter account. If that's not your fancy, you can create a traditional user account by providing nothing more than a valid email and a password. It's fast, and it's ???
 	
+	!!! 
 	Free forever, open-source. ((minigame with "shoot five banners to win a doughnut!"))
 	DOUGHNUT is completely free and always will be, doesn't annoy you with banners or popups((link to AdBlock)), and doesn't sell your information to people that want to track((Google)) and profile((Facebook)) you. Your transactions are kept in an encrypted database, and the entire application source code is publicly available on Github((link to repo)).
 	
