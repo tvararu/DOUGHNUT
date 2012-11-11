@@ -22,19 +22,14 @@
 	
 	%hr
 	.row.marketing
-		.span12		
-			%img{src: "http://placehold.it/1170x500"}
-			-# %h1 
-			-# 				Free as in free beer.
-			-# 				%br
-			-# 				Free as in free speech.
-			-# 				%br
-			-# 				And ad-free.
-			-# 			%p
-			-# 				DOUGHNUT doesn't annoy you with
-			-# 				%a{href: "http://www.google.com/#q=adblock", target: "_blank"} banners or popups.
-			-# 				It's completely free, always will be, and the entire application source code is 
-			-# 				%a{href: "https://github.com/tvararu/DOUGHNUT"} publicly available on Github.
+		.span12
+			#movie
+			:javascript
+				bonsai.run(document.getElementById('movie'), {
+					url: '/assets/movie.js',
+					width: 1170,
+					height: 500
+				});
 	
 	%hr
 	.row.marketing

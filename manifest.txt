@@ -23,6 +23,17 @@ Landing page pitch:
 	
 	!!! 
 	Free forever, open-source. ((minigame with "shoot five banners to win a doughnut!"))
-	DOUGHNUT is completely free and always will be, doesn't annoy you with banners or popups((link to AdBlock)), and doesn't sell your information to people that want to track((Google)) and profile((Facebook)) you. Your transactions are kept in an encrypted database, and the entire application source code is publicly available on Github((link to repo)).
+	%h1 
+		Free as in free beer.
+		%br
+		Free as in free speech.
+		%br
+		And ad-free.
+	%p
+		DOUGHNUT doesn't annoy you with
+		%a{href: "http://www.google.com/#q=adblock", target: "_blank"} banners or popups.
+		It's completely free, always will be, and the entire application source code is 
+		%a{href: "https://github.com/tvararu/DOUGHNUT"} publicly available on Github.
+	
 	
 	

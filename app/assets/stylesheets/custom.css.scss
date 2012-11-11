@@ -22,9 +22,6 @@ $whitesmoke: #F2F2F2;
 }
 
 #landing {
-	.row {
-		height: 500px;
-	}	
 	.marketing {
 		h1 {
 			margin-top: 90px;
@@ -35,7 +32,6 @@ $whitesmoke: #F2F2F2;
 		}
 	}
 	#logorow {
-		height: 200px;
 		p {
 			@include anorexic_p;
 			margin-bottom: 0;
@@ -151,11 +147,16 @@ p {
 	background: $whitesmoke;
 	.nav li a {
 		text-shadow: none;
+		&:hover {
+			color: #333;
+		}
+		
 	}
 }
 
 footer {
   margin-top: 45px;
+  margin-bottom: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
   color: $grey;
