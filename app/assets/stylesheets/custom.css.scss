@@ -149,6 +149,9 @@ p {
 
 .navbar-inner {
 	background: $whitesmoke;
+	.nav li a {
+		text-shadow: none;
+	}
 }
 
 footer {
@@ -249,4 +252,9 @@ input, textarea, select, .uneditable-input {
       border-bottom: 1px solid $grayLighter;
     }
   }
+}
+
+hr {
+	margin: 8px 0;
+	border-top: 1px solid #AAA;
 }
