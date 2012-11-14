@@ -9,7 +9,17 @@ class UsersController < ApplicationController
   end
   
   def show
+    # @user = User.first
     @user = User.find(params[:id])
+    @dates = []
+    @subtotals = {}
+    @user.transactions.each do |transaction|
+      if (@dates.exclude?(transaction.date))
+        @dates << transaction.date
+      # @subtotals[transaction.date] += transaction.value
+      end
+    end
+    @dates.sort!.reverse!
   end
   
   def new

@@ -2,13 +2,26 @@
 .row
 	.span6
 		.center
-			%h1 Lorem ipsum.
+			%h2 Add new transaction
+			%small Placeholder.
+			%h2
+				Transactions for
+				= Time.now.strftime("%d %b %Y")
+			%table.table.table-striped.table-hover
+				%thead
+					%tr
+						%td value
+						%td description
+				%tbody
+					- ((rand()*10).ceil).times do
+						%tr
+							%td= "-#{(rand()*1000).ceil}"
+							%td= Faker::Lorem.sentence(1)
 	.span6
 		%ul.thumbnails.dates
 			- 10.times do |i|
 				%li.span1
 					.thumbnail.btn.btn-date
-						-# %img(src="http://placehold.it/300x200" alt="")
 						%h1= Time.now.strftime("%d")
 						- color = ((i*30 > 255) ? 0 : (255 - i*30))
 						%p{style: "color: rgb(255, #{color}, #{color});"}= "-#{i*30}"

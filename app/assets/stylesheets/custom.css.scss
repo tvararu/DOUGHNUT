@@ -174,15 +174,29 @@ p {
 		}
 	}
 	.dropdown-menu {
-		background: $whitesmoke;
+		background: whitesmoke;
 		li {
 			a {
 				&:hover {
-					background-color: darken($whitesmoke, 30%);
+					background-color: darken(whitesmoke, 30%);
 				}
 			}
 		}
 	}
+}
+
+.image {
+	margin: 0;
+	height: 500px;
+	margin-top: 50px;
+	margin-left: 70px;
+}
+
+.image2 {
+	margin: 0;
+	height: 500px;
+	margin-top: 50px;
+	margin-left: 100px;
 }
 
 .navbar .nav li.dropdown .dropdown-toggle .caret, .navbar .nav li.dropdown.open .caret {
