@@ -1,0 +1,7 @@
+ - main functionality is still missing
+ - responsive views are broken
+ - missing Helvetica Neue views
+ - SSL on Heroku in production
+ - Bonsai integration; Javascript asset compiling
+ - can't scroll over landing page Bonsai
+ - should test it on: Windows, iOS and Android

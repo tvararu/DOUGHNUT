@@ -1,8 +1,3 @@
-!!!
-	- test responsive mobile views
-	- animation with "shoot five annoying banners to win a free DOUGHNUT 12-month subscription plan", onclick fade out and "silly rabbit, DOUGHNUT is free as in free beer"
-
-
 DOUGHNUT - expense tracking that doesn't hurt
  - ruby on rails
  - bootstrap for the interface, CLEAN and LEAN
@@ -11,29 +6,6 @@ DOUGHNUT - expense tracking that doesn't hurt
  - no advertising
  - KEYBINDINGS and huge UX emphasis on rapid data entry; get on, add your shit, get off and go do something else, very few menus and configuration
  - convincing landing page
- - extensible with OPTIONAL feature packs for more advanced personal accounting needs; possible monetization opportunity?
- - Finanshell - possible paid extension application?
+ - extensible with OPTIONAL feature packs for more advanced personal accounting needs; forget about monetization, acquire freedom
+ - Finanshell - cool name, could be a UNIX shell app
 
-Landing page pitch:
-	Drop dead simple. 
-	DOUGHNUT is designed from the ground-up to do one thing and do it well((link to Wikipedia article on Unix philosophy)): keep track of your day-to-day expenses. Forget about endless by using hotkeys and a clean, lean user interface.
-	
-	Up and running in under a minute.
-	By using OpenAuth, you can sign in by using your existing Google, Facebook or Twitter account. If that's not your fancy, you can create a traditional user account by providing nothing more than a valid email and a password. It's fast, and it's ???
-	
-	!!! 
-	Free forever, open-source. ((banner!))
-	%h1 
-		Free as in free beer.
-		%br
-		Free as in free speech.
-		%br
-		And ad-free.
-	%p
-		DOUGHNUT doesn't annoy you with
-		%a{href: "http://www.google.com/#q=adblock", target: "_blank"} banners or popups.
-		It's completely free, always will be, and the entire application source code is 
-		%a{href: "https://github.com/tvararu/DOUGHNUT"} publicly available on Github.
-	
-	
-	
