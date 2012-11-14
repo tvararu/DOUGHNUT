@@ -16,7 +16,7 @@
 			%p
 				DOUGHNUT is designed from the ground-up to 
 				%a{href: "http://en.wikipedia.org/wiki/Unix_philosophy", target: "_blank"} do one thing and do it well:
-				keep track of your day-to-day expenses. Forget about wizard assistants and needlessly long forms. Speed through your transactions by using in-browser hotkeys and a clean, lean user interface.
+				keep track of your day-to-day expenses. Forget about wizard assistants and needlessly long forms. Speed through your transactions by using a clean, lean user interface and in-browser hotkeys.
 		.span6
 			= image_tag("570x500.gif")
 	
@@ -47,16 +47,21 @@
 		.span6
 			%h1 Up and running in under a minute.
 			%p
-				Built for speed, you can start using DOUGHNUT right now by
+				Built for speed,
 				= link_to "signing up", signup_path
-				with your existing Google, Facebook or Twitter account. If that's not your fancy, creating a new account requires nothing more than a valid email and password.
+				for DOUGHNUT requires nothing more than a valid email and password.
+				%b Coming soon:
+				sign in with your existing Google, Facebook or Twitter account.
 				
 	%hr
 	.row#logorow
 		.span12
 			.center
 				%p 
-					Keeping track of your daily expenses
+					Keeping track of your
+					d
+					= image_tag("doughnut.svg")
+					ugh
 					%br
 					has never been this easy.
 				= link_to "Sign up for free", signup_path, class: "btn btn-large btn-green"

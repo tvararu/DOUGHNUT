@@ -35,6 +35,11 @@ $whitesmoke: #F2F2F2;
 	#logorow {
 		p {
 			@include anorexic_p;
+			img {
+				height: 38px;
+				margin-left: -23px;
+				margin-right: -18px;
+			}
 		}
 	}
 }
