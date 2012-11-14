@@ -3,6 +3,14 @@ var ff = '\"Helvetica Neue\", Helvetica, Arial, sans-serif';
 var tfc = '#333';
 
 var bullshit = new Group();
+
+var idietBackground = new Star(585, 250, 250, 5)
+	.attr({
+		fillColor: 'orange'
+	})
+	.animate('5s', { rotation: Math.PI*2 }, { repeat: 9001 })
+	.addTo(bullshit);
+
 var grats = new Text('CONGRATULATIONS!')
 	.attr({
 		x: 80,
@@ -12,7 +20,7 @@ var grats = new Text('CONGRATULATIONS!')
 		textFillColor: tfc
 	})
 	.addTo(bullshit);
-var visitor = new Text('You are our 999.999 visitor!!1')
+var visitor = new Text('You are our 999.999th visitor!!1')
 	.attr({
 		x: 240,
 		y: 200,
@@ -23,10 +31,10 @@ var visitor = new Text('You are our 999.999 visitor!!1')
 	.addTo(bullshit);
 var clickHere = new Text('CLICK HERE TO CLAIM YOUR')
 	.attr({
-		x: 240,
+		x: 40,
 		y: 300,
 		fontFamily: ff,
-		fontSize: '50px',
+		fontSize: '80px',
 		textFillColor: tfc
 	})
 	.addTo(bullshit);
@@ -41,12 +49,12 @@ var claim = new Text ('FREE 12 MONTH DOUGHNUT™®© PREMIUM ACCOUNT!')
 	.addTo(bullshit);
 bullshit.addTo(stage);
 
-var silly = new Text('Don\'t be silly.')
+var silly = new Text('Just kidding.')
 	.attr({
 		x: 100,
 		y: -200,
 		fontFamily: ff,
-		fontSize: '150px',
+		fontSize: '100px',
 		textFillColor: tfc
 	});
 
@@ -119,6 +127,71 @@ var ad = new Text('and ad-')
 	})
 	.addTo(stage);
 
+var row = new Group()
+	.attr({
+		x: 1170
+	});
+
+var image = new Bitmap('wegithubnow.png').on('load', function() {
+	this.addTo(row);
+});
+
+var header = new Text("Free forever, open-source.")
+	.attr({
+		x: 600,
+		y: 90,
+		fontFamily: ff,
+		fontSize: '39px',
+		textFillColor: tfc,
+		selectable: true,
+		textStrokeWidth: 2
+	})
+	.addTo(row);
+
+var p = 159, fs2 = 40, fs2px = '25px';
+new Text('DOUGHNUT doesn\'t annoy you with banners or')
+	.attr({
+		x: 600,
+		y: p,
+		fontFamily: ff,
+		fontSize: fs2px,
+		textFillColor: tfc,
+		selectable: true
+	})
+	.addTo(row);
+new Text('popups. It\'s completely free, always will be, and')
+	.attr({
+		x: 600,
+		y: p + fs2,
+		fontFamily: ff,
+		fontSize: fs2px,
+		textFillColor: tfc,
+		selectable: true
+	})
+	.addTo(row);
+new Text('the entire application source code is publicly')
+	.attr({
+		x: 600,
+		y: p + fs2 * 2,
+		fontFamily: ff,
+		fontSize: fs2px,
+		textFillColor: tfc,
+		selectable: true
+	})
+	.addTo(row);
+new Text('available on Github.')
+	.attr({
+		x: 600,
+		y: p + fs2 * 3,
+		fontFamily: ff,
+		fontSize: fs2px,
+		textFillColor: tfc,
+		selectable: true
+	})
+	.addTo(row);
+
+row.addTo(stage);
+
 var played = false;
 stage.on('click', function(e) {	
 	if (played)
@@ -133,7 +206,7 @@ stage.on('click', function(e) {
 	});
 	silly.addTo(stage);
 	silly.animate('1s', {
-		y: 150
+		y: 200
 	}, {
 		easing: 'elasticOut',
 		delay: '500ms',
@@ -196,8 +269,28 @@ onEnd: function() {
 	ad.animate('500ms', {
 		y: 200
 	}, {
-		easing: 'backOut'
-	})
+		easing: 'backOut',
+onEnd: function() {
+	ad.animate('500ms', {
+		x: -1170
+	}, {
+		easing: 'backIn',
+		delay: '1s'
+	});
+	frei.animate('500ms', {
+		x: -1170
+	}, {
+		easing: 'backIn',
+		delay: '1s'
+	});
+	row.animate('1s', {
+		x: 0
+	}, {
+		easing: 'backOut',
+		delay: '1400ms'
+	});
+}
+	});
 }
 	});
 }

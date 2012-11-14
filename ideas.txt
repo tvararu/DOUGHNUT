@@ -22,7 +22,7 @@ Landing page pitch:
 	By using OpenAuth, you can sign in by using your existing Google, Facebook or Twitter account. If that's not your fancy, you can create a traditional user account by providing nothing more than a valid email and a password. It's fast, and it's ???
 	
 	!!! 
-	Free forever, open-source. ((minigame with "shoot five banners to win a doughnut!"))
+	Free forever, open-source. ((banner!))
 	%h1 
 		Free as in free beer.
 		%br
