@@ -6,7 +6,7 @@ $grayMediumLight: #eaeaea;
 $green: #5BB900;
 $greenDarker: #50A300;
 $grey: #999;
-$whitesmoke: #F2F2F2;
+$whitesmoke: rgba(239, 239, 239, 0.7);
 
 @mixin box_sizing {
   -moz-box-sizing: border-box; 
@@ -148,14 +148,36 @@ p {
 	}
 }
 
-.navbar-inner {
-	background: $whitesmoke;
-	.nav li a {
-		text-shadow: none;
-		&:hover {
-			color: #333;
+.navbar {
+	.navbar-inner {
+	 background: $whitesmoke;
+	}
+	.nav li {
+		a {
+			text-shadow: none;
+			&:hover {
+				color: #333;
+			}
 		}
-		
+	}
+	.dropdown-menu {
+		background: $whitesmoke;
+		li {
+			a {
+				&:hover {
+					background-color: darken($whitesmoke, 30%);
+				}
+			}
+		}
+	}
+}
+
+.navbar .nav li.dropdown .dropdown-toggle .caret, .navbar .nav li.dropdown.open .caret {
+	border-top-color: black;
+	border-bottom-color: black;
+	&:hover {
+		border-top-color: black;
+		border-bottom-color: black;
 	}
 }
 

@@ -4,3 +4,10 @@
 		%section
 			%h1
 				= @user.email
+	.span8
+		%ul
+			- @user.transactions.each do |transaction|
+				%li
+					= transaction.value
+					|
+					= transaction.description
