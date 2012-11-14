@@ -109,7 +109,7 @@ describe "UserPages" do
       end
     
       describe "should show the profile page" do
-        it { should have_selector('p', text: user.email) }
+        it { should have_selector('title', text: user.email) }
       end
     end
     
@@ -119,7 +119,7 @@ describe "UserPages" do
       before { visit user_path(bill) }
       
       describe "should not show somebody else's profile page" do
-        it { should_not have_selector('p', text: bill.email) }
+        it { should_not have_selector('title', text: bill.email) }
       end
     end
 
@@ -127,7 +127,7 @@ describe "UserPages" do
       before { visit user_path(user) }
 
       describe "should not show somebody's profile page" do
-        it { should_not have_selector('p', text: user.email) }
+        it { should_not have_selector('title', text: user.email) }
       end
     end
   end

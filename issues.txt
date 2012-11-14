@@ -6,3 +6,5 @@
 	- Bonsai integration; Javascript asset compiling
 	- can't scroll over landing page Bonsai
 	- should test it on: Windows, iOS and Android
+	- no hotkeys yet
+	- formula for red color in date thumbnails isn't so smart
