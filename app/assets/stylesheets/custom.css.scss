@@ -22,6 +22,20 @@ $whitesmoke: rgba(239, 239, 239, 0.7);
 	line-height: 1;
 }
 
+@media (min-width: 1200px)
+{
+	body {
+		padding-top: 60px;
+	}
+}
+
+@media (min-width: 979px) and (max-width: 1200px)
+{
+	body {
+		padding-top: 60px;
+	}
+}
+
 #landing {
 	.marketing {
 		h1 {
@@ -81,7 +95,6 @@ html {
 }
 
 body {
-  padding-top: 60px;
 	background: url('backnoise.jpg');
 }
 

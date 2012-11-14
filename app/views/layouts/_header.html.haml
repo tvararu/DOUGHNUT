@@ -1,34 +1,33 @@
 %header.navbar.navbar-fixed-top
 	.navbar-inner
 		.container
-			- if signed_in?
-				%a#logo{href: user_path(current_user)}
-					D
-					= image_tag("doughnut.svg")
-					UGHNUT
-			- else
-				%a#logo{href: root_path}
-					D
-					= image_tag("doughnut.svg")
-					UGHNUT
-			%nav
-				%ul.nav.pull-right
-					%li
+			%a#logo{ href: (signed_in? ? user_path(current_user) : root_path) }
+				D
+				= image_tag("doughnut.svg")
+				UGHNUT
+			%a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
+				%span.icon-bar
+				%span.icon-bar
+				%span.icon-bar
+			.nav-collapse.collapse
+				%nav
+					%ul.nav.pull-right
+						%li
+							- if signed_in?
+								= link_to 'Home', current_user
+							- else
+								= link_to "Home", root_path
+						%li= link_to "Help", help_path
 						- if signed_in?
-							= link_to 'Home', current_user
+							- if current_user && current_user.admin?
+								%li= link_to "Users", users_path
+							%li#fat-menu.dropdown
+								%a.dropdown-toggle(href="#" data-toggle="dropdown")
+									Account
+									%b.caret
+								%ul.dropdown-menu
+									%li= link_to "Settings", edit_user_path(current_user)
+									%li.divider
+									%li= link_to "Sign out", signout_path, method: "delete"
 						- else
-							= link_to "Home", root_path
-					%li= link_to "Help", help_path
-					- if signed_in?
-						- if current_user && current_user.admin?
-							%li= link_to "Users", users_path
-						%li#fat-menu.dropdown
-							%a.dropdown-toggle(href="#" data-toggle="dropdown")
-								Account
-								%b.caret
-							%ul.dropdown-menu
-								%li= link_to "Settings", edit_user_path(current_user)
-								%li.divider
-								%li= link_to "Sign out", signout_path, method: "delete"
-					- else
-						%li= link_to "Sign in", signin_path
+							%li= link_to "Sign in", signin_path
