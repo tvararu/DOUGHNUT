@@ -1,6 +1,11 @@
 -provide(:title, @user.email)
 .row
-	.span6.offset3
-		%h1 Recent transactions
-		%ul
-			= render @transactions
+	%aside.span6.offset3
+		%section
+			= render 'shared/transaction_form'
+		%section
+			%h1 Recent transactions
+			- if @user.transactions.any?
+				%ul.transactions
+					= render @transactions
+				= will_paginate @transactions

@@ -7,6 +7,9 @@ class Transaction < ActiveRecord::Base
   
   belongs_to :user
   
+  validates :date, presence: true
   validates :user_id, presence: true
   validates :description, length: { maximum: 255 }
+  
+  default_scope order: 'transactions.created_at DESC'
 end

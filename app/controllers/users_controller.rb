@@ -10,7 +10,8 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
-    @transactions = @user.transactions
+    @transactions = @user.transactions.paginate(page: params[:page])
+    @transaction = @user.transactions.build
   end
   
   def new

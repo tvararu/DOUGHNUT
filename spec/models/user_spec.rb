@@ -133,7 +133,14 @@ describe User do
   describe "transactions" do
     before { @user.save }
     let!(:transaction) do
-      FactoryGirl.create(:transaction, user: @user)
+      FactoryGirl.create(:transaction, user: @user, created_at: Time.now)
+    end
+    let!(:older_transaction) do
+      FactoryGirl.create(:transaction, user: @user, created_at: 1.hour.ago)
+    end
+    
+    it "should be in the right order" do
+      @user.transactions.should == [transaction, older_transaction]
     end
     
     it "should be destroyed along with user" do

@@ -1,6 +1,7 @@
 Doughnut::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :transactions, only: [:create, :destroy]
   
   if HighVoltage.routes
     get HighVoltage.route_drawer.match_attributes

@@ -32,6 +32,13 @@ describe Transaction do
     end
   end
   
+  describe "date" do
+    describe "not present" do
+      before { @transaction.date = nil }
+      it { should_not be_valid }
+    end
+  end
+  
   describe "description" do
     describe "is too long" do
       before { @transaction.description = 'a' * 256 }
