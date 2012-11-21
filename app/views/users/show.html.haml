@@ -1,27 +1,6 @@
 -provide(:title, @user.email)
 .row
-	.span6
-		.center
-			%h2 Add new transaction
-			%small Placeholder.
-			%h2
-				Transactions for
-				= Time.now.strftime("%d %b %Y")
-			%table.table.table-striped.table-hover
-				%thead
-					%tr
-						%td value
-						%td description
-				%tbody
-					- ((rand()*10).ceil).times do
-						%tr
-							%td= "-#{(rand()*1000).ceil}"
-							%td= Faker::Lorem.sentence(1)
-	.span6
-		%ul.thumbnails.dates
-			- 10.times do |i|
-				%li.span1
-					.thumbnail.btn.btn-date
-						%h1= Time.now.strftime("%d")
-						- color = ((i*30 > 255) ? 0 : (255 - i*30))
-						%p{style: "color: rgb(255, #{color}, #{color});"}= "-#{i*30}"
+	.span6.offset3
+		%h1 Recent transactions
+		%ul
+			= render @transactions

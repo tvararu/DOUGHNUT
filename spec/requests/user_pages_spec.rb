@@ -101,6 +101,8 @@ describe "UserPages" do
 
   describe "profile page" do
     let (:user) { FactoryGirl.create(:user) }
+    let!(:t1) { FactoryGirl.create(:transaction, user: user, value: "1") }
+    let!(:t2) { FactoryGirl.create(:transaction, user: user, value: "2") }
     
     describe "as own user" do
       before do
@@ -110,6 +112,11 @@ describe "UserPages" do
     
       describe "should show the profile page" do
         it { should have_selector('title', text: user.email) }
+      end
+      
+      describe "should show transactions" do
+        it { should have_content(t1.value) }
+        it { should have_content(t2.value) }
       end
     end
     
