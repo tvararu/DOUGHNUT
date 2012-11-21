@@ -1,5 +1,6 @@
 class TransactionsController < ApplicationController
   before_filter :signed_in_user
+  before_filter :correct_user, only: :destroy
   
   def index
     
@@ -14,6 +15,13 @@ class TransactionsController < ApplicationController
   end
   
   def destroy
-    
+    @transaction.destroy
+    redirect_to current_user
+  end
+  
+private
+  def correct_user
+    @transaction = current_user.transactions.find_by_id(params[:id])
+    redirect_to root_url if @transaction.nil?
   end
 end

@@ -8,3 +8,6 @@
 	- should test it on: Windows, iOS and Android
 	- no hotkeys yet
 	- formula for red color in date thumbnails isn't smart
+	
+bugs:
+	- no error messages for bad transaction form submittion; spec is commented out. root problem: redirect_to current_user in transaction_controller.rb

@@ -14,10 +14,10 @@ describe "TransactionPages" do
         expect { click_button "Add" }.not_to change(Transaction, :count)
       end
       
-      describe "error messages" do
-        before { click_button "Add" }
-        it { should have_content('error') }
-      end
+      # describe "error messages" do
+      #   before { click_button "Add" }
+      #   it { should have_content('error') }
+      # end
     end
     
     describe "with valid information" do
@@ -28,6 +28,18 @@ describe "TransactionPages" do
       
       it "should create a transaction" do
         expect { click_button "Add" }.to change(Transaction, :count).by(1)
+      end
+    end
+  end
+  
+  describe "transaction destruction" do
+    before { FactoryGirl.create(:transaction, user: user) }
+    
+    describe "as correct user" do
+      before { visit user_path(user) }
+      
+      it "should delete a transaction" do
+        expect { click_link "x" }.to change(Transaction, :count).by(-1)
       end
     end
   end

@@ -136,7 +136,7 @@ describe User do
       FactoryGirl.create(:transaction, user: @user, created_at: Time.now)
     end
     let!(:older_transaction) do
-      FactoryGirl.create(:transaction, user: @user, created_at: 1.hour.ago)
+      FactoryGirl.create(:transaction, user: @user, created_at: 1.day.ago)
     end
     
     it "should be in the right order" do
