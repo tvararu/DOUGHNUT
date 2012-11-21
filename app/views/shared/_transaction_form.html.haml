@@ -5,6 +5,6 @@
 	.field
 		= f.text_field :description, placeholder: "chocolate doughnuts"
 	.field
-		%input#transaction_date(name="transaction[date]" type="date")
+		= f.date_field :date
 	= f.submit "Add", class: "btn btn-large btn-green"
 	
