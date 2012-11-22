@@ -2,25 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.dates {
-	.btn-date {
-		color: white;
-		box-shadow: none;
-		background: #AAA;
-		border: 0;
-		&:hover {
-			background: darken(#AAA, 30%);
-			color: white;
-		}
-		h1 {
-			font-size: 20px;
-			margin-bottom: 0px;
-			text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-		}
-		p {
-			font-size: 15px;
-			margin-bottom: 0px;
-			text-shadow: 0 1px 1px rgb(0, 0, 0);
+.transaction-form {
+	width: 100%;
+	
+	div {
+		float: left;
+		height: 50px;
+	}
+	
+	.field-value {
+		width: 20%;
+	}
+	
+	.field-description {
+		width: 30%;
+	}
+	
+	.field-date {
+		width: 50%;
+		
+		select {
+			width: 33%;
+			float: left;
+			height: 40px;
 		}
 	}
 }

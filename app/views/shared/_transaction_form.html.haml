@@ -1,10 +1,12 @@
 = form_for(@transaction) do |f|
 	= render 'shared/error_messages', object: f.object
-	.field-value
-		= f.text_field :value, placeholder: "e.g. 133.7"
-	.field-description
-		= f.text_field :description, placeholder: "e.g. chocolate doughnuts"
-	.field-date
-		= f.date_select :date
-	= f.submit "Add", class: "btn btn-large btn-green"
+	.transaction-form
+		.field-value
+			= f.text_field :value, placeholder: "value, e.g. 133.7"
+		.field-description
+			= f.text_field :description, placeholder: "description, e.g. doughnuts"
+		.field-date
+			= f.date_select :date, order: [:day, :month, :year]
+	.center
+		= f.submit "Add transaction", class: "btn btn-large btn-green"
 	

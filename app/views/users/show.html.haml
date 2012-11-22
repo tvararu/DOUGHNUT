@@ -1,11 +1,14 @@
 -provide(:title, @user.email)
 .row
-	%aside.span6.offset3
+	%aside.span8.offset2
 		%section
 			= render 'shared/transaction_form'
+		%hr
 		%section
-			%h1 Recent transactions
 			- if @user.transactions.any?
+				%h1.center Recent transactions
 				%ul.transactions
 					= render @transactions
 				= will_paginate @transactions
+			- else
+				%h1.center You don't have any transactions! Add some using the simple form above.
