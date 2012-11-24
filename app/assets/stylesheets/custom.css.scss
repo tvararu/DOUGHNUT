@@ -184,6 +184,9 @@ p {
 		}
 	}
 }
+.nav-collapse .nav > li > a:hover, .nav-collapse .dropdown-menu a:hover {
+	background-color: #aaa;
+}
 
 .image {
 	margin: 0;
