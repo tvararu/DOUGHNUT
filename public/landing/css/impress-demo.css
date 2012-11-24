@@ -217,6 +217,87 @@ a:focus {
 	border: none;
 }
 
+.step .span6 {
+	height: 100%;
+	float: left;
+}
+
+.step .span6 h1 {
+	font-size: 4em;
+	letter-spacing: -2px;
+	margin-bottom: 30px;
+	margin-top: 90px;
+	margin-left: 90px;
+	text-align: left;
+}
+
+.step .span6 p {
+	font-size: 30px;
+	line-height: 35px;
+	margin-left: 90px;
+	margin-right: 90px;
+}
+
+.step .span6 img {
+	margin-left: 90px;
+	margin-top: 80px;
+}
+
+.step .left-half {
+	width: 50%;
+}
+
+.step .right-half {
+	width: 50%;
+}
+
+#fast .span6 h1 {
+	margin-top: 180px;
+}
+
+#fast .span6 img {
+	margin-top: 200px;
+	margin-left: 300px;
+}
+
+#fast h1 {
+	line-height: 70px;
+	margin-left: 0px;
+	margin-right: 30px;
+	font-size: 5em;
+}
+
+#fast p {
+	font-size: 35px;
+	margin-left: 0px;
+}
+
+#overview h1 {
+	font-size: 70px;
+	margin-bottom: 70px;
+	font-weight: 100;
+	letter-spacing: 3px;
+	line-height: 1;
+	text-align: center;
+}
+
+#overview .btn {
+	color: white;
+	font-size: 50px;
+	padding: 24px 64px;
+	box-shadow: none;
+	background: #5bb900;
+	border: 0;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	margin-left: 150px;
+	margin-top: 100px;
+}
+
+#overview .btn:hover {
+	background: #50a300;
+	color: white;
+}
+
 .impress-enabled .hint { display: block }
 
 .impress-on-bored .hint {
