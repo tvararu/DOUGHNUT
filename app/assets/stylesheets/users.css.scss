@@ -28,3 +28,52 @@
 		}
 	}
 }
+
+.transactions-header {
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+.transactions {
+	margin-left: 0px;
+	list-style-type: none;
+	
+	.date-separator {
+		font-size: 30px;
+		color: #aaa;
+		line-height: 30px;
+		text-align: right;
+		margin: 10px 0px;
+	}
+	
+	.transaction {
+		width: 100%;
+		height: 50px;
+		margin-top: 2px;
+		font-size: 30px;
+		line-height: 50px;
+		
+		div {
+			float: left;
+		}
+		
+		.tran-value {
+			width: 30%;
+			text-align: right;
+			padding-right: 20px;
+		}
+		
+		.tran-desc {
+			width: 50%;
+			border-left: 1px solid #aaa;
+			height: 50px;
+			font-size: 20px;
+			padding-left: 20px;
+		}
+		
+		.tran-destroy {
+			
+		}
+	}
+}

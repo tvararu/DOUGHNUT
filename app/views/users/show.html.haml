@@ -1,4 +1,5 @@
 -provide(:title, @user.email)
+
 .row
 	%aside.span8.offset2
 		%section
@@ -6,9 +7,17 @@
 		%hr
 		%section
 			- if @user.transactions.any?
-				%h1.center Recent transactions
+				%h1.transactions-header Recent transactions
 				%ul.transactions
-					= render @transactions
+					- previous_date = nil
+					- @transactions.each do |transaction|
+						- if transaction.date != previous_date
+							%li.date-separator= transaction.date.strftime("%A, %e %b %Y")
+						%li.transaction
+							.tran-value= transaction.value
+							.tran-desc= transaction.description
+							%i.icon-remove= link_to "delete", transaction, method: :delete, data: { confirm: "Are you sure?" }
+						- previous_date = transaction.date
 				= will_paginate @transactions
 			- else
 				%h1.center You don't have any transactions! Add some using the simple form above.
