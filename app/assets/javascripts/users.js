@@ -6,3 +6,9 @@
 $(function() {
 	$('.tran-desc').popover({placement: "bottom", title: "Description"});
 });
+
+window.onload = function(){
+  var text_input = document.getElementById ('value-field');
+  text_input.focus ();
+  text_input.select ();
+}

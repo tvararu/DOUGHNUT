@@ -2,7 +2,7 @@
 	= render 'shared/error_messages', object: f.object
 	.transaction-form
 		.field-value
-			= f.text_field :value, placeholder: "value, e.g. 133.7"
+			= f.text_field :value, placeholder: "value, e.g. 133.7", id: "value-field"
 		.field-description
 			= f.text_field :description, placeholder: "description, e.g. doughnuts"
 		.field-date

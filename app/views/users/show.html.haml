@@ -6,7 +6,7 @@
 			= render 'shared/transaction_form'
 		-# %hr
 		%section
-			- if @user.transactions.any?
+			- unless @transactions.empty?
 				%h1.transactions-header Recent transactions
 				%ul.transactions
 					- previous_date = nil
@@ -14,7 +14,7 @@
 						- if transaction.date != previous_date
 							- sum = @transactions.select{ |t| t.date == transaction.date }.inject(0) { |n, t| n + t.value }
 							%li.date-separator
-								.sum= sum 
+								.sum{style: "color: #{sum < 0 ? "#caa;" : "#aca"}"}= sum 
 								.date= transaction.date.strftime("%a, %e %b %Y")
 						%li.transaction
 							.tran-value= transaction.value
@@ -25,4 +25,4 @@
 						- previous_date = transaction.date
 				= will_paginate @transactions
 			- else
-				%h1.center You don't have any transactions! Add some using the simple form above.
+				%h1.transactions-header You don't have any transactions! Add some using the simple form above.
