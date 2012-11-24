@@ -7,7 +7,7 @@ Doughnut::Application.routes.draw do
     get HighVoltage.route_drawer.match_attributes
   end
 
-  # root to: '/landing/index.html'
+  root to: 'high_voltage/pages#show', id: 'home'
   
   match '/help',    to: 'high_voltage/pages#show', id: 'help'
   match '/about',   to: 'high_voltage/pages#show', id: 'about'
