@@ -16,7 +16,7 @@
 						%li.transaction
 							.tran-value= transaction.value
 							.tran-desc= transaction.description
-							%i.icon-remove= link_to "delete", transaction, method: :delete, data: { confirm: "Are you sure?" }
+							%i.icon-remove= link_to "delete", transaction, method: :delete#, data: { confirm: "Are you sure?" }
 						- previous_date = transaction.date
 				= will_paginate @transactions
 			- else

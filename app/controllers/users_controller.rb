@@ -12,6 +12,11 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @transactions = @user.transactions.paginate(page: params[:page])
     @transaction = @user.transactions.build
+    
+    respond_to do |format|
+      format.html # show.html.haml
+      format.json { render json: [@user, @transactions] }
+    end
   end
   
   def new
