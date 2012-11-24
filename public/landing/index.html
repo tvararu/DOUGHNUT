@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>DOUGHNUT</title>
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+	
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <div id="bored" class="step" data-x="0" data-y="0" data-rotate-x="45">
+		<h1>
+			D
+			<img src="images/doughnut.png"></img>
+			UGHNUT
+		</h1>
+		<p>Expense tracking that doesn't hurt.</p>
+		<a class="btn" href="/signup" id="signup">Sign up now</a>
+	</div>
+	
+	<div id="simple" style="height: 500px;" class="step" data-x="0" data-y="521" data-z="270">
+		<div class="left-half span6">
+			<h1>Drop dead simple.</h1>
+			<p>DOUGHNUT is designed from the ground-up to <a href="http://en.wikipedia.org/wiki/Unix_philosophy" target="_blank">do one thing and do it well:</a> keep track of your day-to-day expenses. Forget about wizard assistants and needlessly long forms. Speed through your transactions by using a clean, lean user interface.</p>
+		</div>
+		<div class="right-half span6">
+			<img src="images/peek.png"></img>
+		</div>
+	</div>
+	
+	<div id="fast" class="step" data-x="0" data-y="771" data-z="-112" data-rotate-x="-90">
+		<div class="right-half span6">
+			<img src="images/bolt.png"></img>
+		</div>
+		<div class="left-half span6">
+			<h1>Up and running in under a minute.</h1>
+			<p>
+				Built for speed,
+				<a href="/signup">signing up</a>
+				for DOUGHNUT requires nothing more than a valid email and password.
+				<b>Coming soon:</b>
+				sign in with your existing Google, Facebook or Twitter account.
+			</p>
+		</div>
+	</div>
+	
+	<div style="height: 500px;" class="step" data-x="0" data-y="521" data-z="-497" data-rotate-y="180">
+		<script src="js/bonsai-0.4.1.min.js"></script>
+		<div id="movie"></div>
+		<script>
+			bonsai.run(document.getElementById('movie'), {
+				url: 'js/movie.js',
+				width: 1366,
+				height: 500
+			});
+		</script>
+	</div>
+	
+	<div id="overview" style="background: none;" class="step" data-x="-900" data-y="500" data-rotate-y="135" data-rotate-x="-15" data-rotate-z="9" data-scale="3">
+		<div class="right-half span6">
+		</div>
+		<div class="left-half span6">
+			<h1>It's easier than emptying a box of doughnuts.</h1>
+			<a class="btn" href="/signup" id="signup">Sign up for free</a>
+		</div>
+	</div>
+	
+	<div style="height: 500px; width: 768px;" class="step" data-x="682" data-y="521" data-z="-112" data-rotate-y="90">
+		
+	</div>
+	
+	<div style="height: 500px; width: 768px;" class="step" data-x="-682" data-y="521" data-z="-112" data-rotate-y="-90">
+		
+	</div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
