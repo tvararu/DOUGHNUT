@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin meet" viewBox="0 0 500 500">
+	<defs>
+		<style type="text/css"><![CDATA[
+			.circles, .coating, .sprinkles
+			{
+				stroke: #333;
+				stroke-width: 10;
+			}
+			.circles
+			{
+				fill: rgba(0, 0, 0, 0.0);
+			}
+			.coating
+			{
+				fill: none;
+			}
+			.sprinkles
+			{
+				stroke-linecap: round;
+			}
+		]]></style>
+	</defs>
+	<g class="circles">
+		<circle cx="250" cy="250" r="200" />
+		<circle cx="250" cy="250" r="70" />
+	</g>
+	
+	<g class="coating">
+		<path d="M52,280  C52,220  127,220 127,281" />
+		<path d="M127,280 C127,320 187,320 187,280" />
+	
+		<path d="M318,225 C340,220 382,220 382,281" />
+		<path d="M382,280 C382,320 441,320 441,310" />
+	</g>
+	
+	<g class="sprinkles">
+		<path d="M90,185  L100,165" />
+		<path d="M118,155 L143,165" />
+		<path d="M168,155 L178,170" />
+		<path d="M128,212 L138,230" />
+		<path d="M198,135 L218,140" />
+	
+		<path d="M148,115 L168,110" />
+		<path d="M228,85  L238,100" />
+		<path d="M248,130 L263,140" />
+		<path d="M288,130 L293,112" />
+		<path d="M318,110 L335,120" />
+	
+		<path d="M322,165 L335,155" />
+		<path d="M375,140 L380,158" />
+		<path d="M398,195 L388,210" />
+	</g>
+</svg>

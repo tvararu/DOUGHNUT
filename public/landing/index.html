@@ -23,7 +23,13 @@
 <div id="impress">
 
     <div id="bored" class="step" data-x="0" data-y="0" data-rotate-x="45">
-		<p>1</p>
+		<h1>
+			D
+			<img src="images/doughnut.png"></img>
+			UGHNUT
+		</h1>
+		<p>Expense tracking that doesn't hurt.</p>
+		<a class="btn" href="/signup" id="signup">Sign up now</a>
 	</div>
 	
 	<div style="height: 500px;" class="step" data-x="0" data-y="521" data-z="270">
@@ -31,14 +37,14 @@
 	</div>
 
 	<div style="height: 500px;" class="step" data-x="0" data-y="521" data-z="-497" data-rotate-y="180">
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/bonsai/0.4/bonsai.min.js"></script>
+		<script src="js/bonsai-0.4.1.min.js"></script>
 		<div id="movie"></div>
 		<script>
-			bonsai.run(document.getElementById('movie'), {
-				url: 'js/movie.js',
-				width: 1366,
-				height: 500
-			});
+			// bonsai.run(document.getElementById('movie'), {
+			// 				url: 'js/movie.js',
+			// 				width: 1366,
+			// 				height: 500
+			// 			});
 		</script>
 	</div>
 	
@@ -46,7 +52,7 @@
 		<p>3</p>
 	</div>
 	
-	<div style="background: none;" class="step" data-x="-900" data-y="500" data-rotate-y="135" data-rotate-x="-15" data-rotate-z="9" data-scale="3">
+	<div id="overview" style="background: none;" class="step" data-x="-900" data-y="500" data-rotate-y="135" data-rotate-x="-15" data-rotate-z="9" data-scale="3">
 		
 	</div>
 	
@@ -60,9 +66,11 @@
 
 </div>
 
+<!--
 <div class="hint">
     <p>Use a spacebar or arrow keys to navigate</p>
 </div>
+-->
 <script>
 if ("ontouchstart" in document.documentElement) { 
     document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";

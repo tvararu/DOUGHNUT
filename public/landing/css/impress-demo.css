@@ -162,6 +162,61 @@ a:focus {
     transition:         opacity 1s,         transform 0.5s 1s;
 }
 
+.step {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	color: #333333;
+}
+
+#bored {
+	padding: 60px;
+	text-align: center;
+}
+
+#bored h1 {
+	font-size: 230px;
+	font-weight: 100;
+	margin-bottom: 10px;
+	line-height: 1;
+	color: inherit;
+	letter-spacing: -1px;
+}
+
+#bored img {
+	height: 172px;
+	margin-left: -60px;
+	margin-right: -59px;
+	margin-top: 150px;
+}
+
+#bored p {
+	font-size: 78px;
+	margin-bottom: 70px;
+	font-weight: 100;
+	letter-spacing: 3px;
+	line-height: 1;
+}
+
+#bored .btn {
+	color: white;
+	font-size: 50px;
+	padding: 24px 64px;
+	box-shadow: none;
+	background: #5bb900;
+	border: 0;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#bored .btn:hover {
+	background: #50a300;
+	color: white;
+}
+
+#overview {
+	border: none;
+}
+
 .impress-enabled .hint { display: block }
 
 .impress-on-bored .hint {
