@@ -1,4 +1,5 @@
 DOUGHNUT
+	- convention, then configuration
 	- expense tracking that doesn't hurt
 	- ruby on rails
 	- bootstrap for the interface, CLEAN and LEAN
@@ -12,3 +13,8 @@ DOUGHNUT
 
 Misc:
 	- Excel isn't better because it's not particularly touchscreen friendly and overall the application definitely isn't made for this
+	
+Extensions:	
+	- bar graphs
+	- transaction search
+	- currencies

@@ -39,7 +39,7 @@ describe "TransactionPages" do
       before { visit user_path(user) }
       
       it "should delete a transaction" do
-        expect { click_link "x" }.to change(Transaction, :count).by(-1)
+        expect { find(".delete-button").click }.to change(Transaction, :count).by(-1)
       end
     end
   end

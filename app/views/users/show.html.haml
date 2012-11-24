@@ -4,7 +4,7 @@
 	%aside.span8.offset2
 		%section
 			= render 'shared/transaction_form'
-		%hr
+		-# %hr
 		%section
 			- if @user.transactions.any?
 				%h1.transactions-header Recent transactions
@@ -12,11 +12,16 @@
 					- previous_date = nil
 					- @transactions.each do |transaction|
 						- if transaction.date != previous_date
-							%li.date-separator= transaction.date.strftime("%A, %e %b %Y")
+							- sum = @transactions.select{ |t| t.date == transaction.date }.inject(0) { |n, t| n + t.value }
+							%li.date-separator
+								.sum= sum 
+								.date= transaction.date.strftime("%a, %e %b %Y")
 						%li.transaction
 							.tran-value= transaction.value
-							.tran-desc= transaction.description
-							%i.icon-remove= link_to "delete", transaction, method: :delete#, data: { confirm: "Are you sure?" }
+							.tran-desc{rel: "popover", :"data-content" => transaction.description}= truncate(transaction.description, length: 18)
+							.tran-delete
+								= link_to transaction, method: :delete, class: "delete-button" do
+									%i.icon-remove
 						- previous_date = transaction.date
 				= will_paginate @transactions
 			- else
